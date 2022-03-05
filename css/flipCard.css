@@ -83,3 +83,11 @@
     border-color: #ff9b00;
     background: linear-gradient(375deg, transparent, transparent);
 }
+
+.hoveringCard{
+    transition:0.5s linear;
+}
+.hoveringCard:hover{
+    box-shadow:0 0 35px #000; 
+    transform: translateY(-10px);
+}

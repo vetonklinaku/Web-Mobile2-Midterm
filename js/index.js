@@ -1,4 +1,4 @@
-
+//This is a old file that might be useful later but currenttly isnt used anywhere.
 
 // showMenu gets id mobileMenu and changes it transform to translateX(0)
 function showMenu() {
