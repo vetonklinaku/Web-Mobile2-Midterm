@@ -1,0 +1,77 @@
+#header {
+	text-align: center; /*Align the text center*/
+	margin-top: 10%; /*5% margin on top of elements*/
+}
+
+#header h2 {
+    font-size: 3rem;
+}
+a{
+    text-decoration: none;
+    color:#000;
+}
+.gallery {
+    width: 90%; /* Shows the amount that the page will fill horizontally. No matter the screen the div will always take 90% of the page */
+    display: flex; /* Positing items on a flex manner as it iseasier. */
+    flex-direction: row; /* Putting the items in a row format .*/
+    flex-wrap: wrap; /* Going into another row when the former row is completed to aviod overleap. */
+    row-gap: 50px; /* The gap between each row */
+    column-gap: 50px; /* The gap between each colmun */
+    margin: 5%; /* the space outside the borders on each side, top, bottom, left, right. */
+    justify-content: space-evenly; /* The space of items is distributed evenly between them. */
+}
+h3, p {
+    text-align: center; /* The text will be placed on the center of the div.*/
+  }
+.buttonRes {
+    padding: 10px 20px; /* The space of text from the corners. */
+    border: none; /* No border for the button */
+    font-size: 1rem; /*Increase the font size to 1rem*/
+    margin-left: auto; /*The space  outside the border on the right side will be set automatically*/
+    margin-right: auto; /*The space  outside the border on the right side will be set automatically*/
+     display: block;  /* The display will be on a block format*/
+    margin-bottom: 5%; /*The space from the bottom will be 5%*/
+    cursor: pointer;  /*Cursor will change when hovering the button into a hand*/
+    border-radius: 7%; /* The corners of the button will take a curve form */
+    transition: 0.4s;  /* The time for transformation is 0.4 seconds*/
+    background-color: #fab700; /* Change the background color to yellowish*/
+}
+.buttonRes:hover {
+    background-color: #dfa300; /* Change the background color to yellowish*/
+    box-shadow: 1px 1px 10px rgba(105, 105, 105,0.5); /*Add box shadow when hovering over the button*/
+}
+.carrow {
+    width: 30%; /* The width that each of the 9 divs will take within the main gallery div*/
+    background-image: linear-gradient(180deg, #fab700 0%, #eefa4c 100%);  /* The linear change of color of the div*/
+    border-radius: 12px; /* The curve of the div thru the corners*/
+    box-shadow: -8px 8px 12px dimgray; /* The shadow that the div will recieve */
+    transition: 0.4s; /* The time for transformation is 0.4 seconds*/
+}
+
+.car-info-text h3 {
+    font-size: 2.5rem; /*Increase the font size to 2.5rem*/
+    margin: 0; /*No spacing*/
+}
+
+.car-info-text p {
+    font-size: 1rem; /* Font size 1rem*/
+}
+
+.carrow .cars {
+    width: 100%; /* The 9divs and the pics of the cars displayed within them will have 100% of width within their div */
+}
+
+.carrow:hover {
+    transform: translateY(-30px); /*Make the card go up by 30px when hovering over it*/
+    box-shadow: -16px 16px 32px dimgray; /*Add box shadow when hovering*/
+    z-index: 200; /*Increase the z index when hovering*/
+}
+#carpic1 {content: url(../images/cars/toyota.png);} /* Content is used to display the pictures so non-authorized cannot copy or download the pictures*/
+#carpic2 {content: url(../images/cars/tesla2.png);} /* Content is used to display the pictures so non-authorized cannot copy or download the pictures*/
+#carpic3 {content: url(../images/cars/tesla3.png);} /* Content is used to display the pictures so non-authorized cannot copy or download the pictures*/
+#carpic4 {content: url(../images/cars/bmwM5.png);} /* Content is used to display the pictures so non-authorized cannot copy or download the pictures*/
+#carpic5 {content: url(../images/cars/mercedescabrio.png);} /* Content is used to display the pictures so non-authorized cannot copy or download the pictures*/
+#carpic6 {content: url(../images/cars/mercedesclk.png);} /* Content is used to display the pictures so non-authorized cannot copy or download the pictures*/
+#carpic7 {content: url(../images/cars/cadillac.png);} /* Content is used to display the pictures so non-authorized cannot copy or download the pictures*/
+#carpic8 {content: url(../images/cars/Velar.png);} /* Content is used to display the pictures so non-authorized cannot copy or download the pictures*/
+#carpic9 {content: url(../images/cars/land_rover.png);} /* Content is used to display the pictures so non-authorized cannot copy or download the pictures*/

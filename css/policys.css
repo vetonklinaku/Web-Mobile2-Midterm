@@ -1,0 +1,48 @@
+.policies-title {
+	margin-top: 100px;
+	font-size: 4rem;
+	text-transform: uppercase;
+	display: flex;
+	justify-content: center;
+}
+
+.foto{
+	height: 600px;
+}
+
+#policiesPhoto{content: url(../images/policies/policies.jpg);}
+#keyPhoto{content: url(../images/policies/keys.jpg);}
+
+.policies {
+	display: flex;
+	flex-direction: column;
+	width: 90%;
+	margin: auto;
+	justify-content: center;
+	gap: 50px;
+	margin-bottom: 150px;
+}
+
+.policies-row {
+	display: flex;
+	width: 90%;
+	margin: auto;
+	gap: 50px;
+}
+.policies-row h6 {
+	font-size: 3rem;
+	margin: 0;
+	text-transform: uppercase;
+}
+.policies-row p {
+	font-size: 1.3rem;
+	margin: 0;
+}
+.policies-row li {
+	font-size: 1.3rem;
+	margin: 0;
+}
+
+.policies-row ul {
+	list-style: upper-roman;
+}
