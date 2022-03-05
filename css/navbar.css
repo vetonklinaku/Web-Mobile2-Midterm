@@ -1,0 +1,111 @@
+html {
+    font-size: 16px; 
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins';
+}
+
+::selection {
+    -webkit-text-stroke: 1px blue;
+    color: transparent;
+}
+
+.main {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+/* ============================================
+    the styles below are for the navbar and apply to all five pages
+============================================ */
+.navbar {
+    position: fixed;  /* fixed position so the navbar is always on top of the page even if we scroll */
+    top: 0;  /* top 0 for the navbar to be on top */
+    display: flex;  /* This creates a flexbox which makes it easier to position elements relatively to each other*/  /* Creating a flexbox to display items as flex elements then position them easily */
+    justify-content: space-between;  /* Since we have 2 main elements in the navbar we give this property to push both elements away from each other to the opposite ends */
+    align-items: center;  /* Since we have a deafult flex-direction:row this property with align items in the center vertically */
+    z-index: 2000;  /* z-index is 2000 so it is always on top, 2000 value is to overestimate so we do not need to go back and change if we add more elements */
+    height: 100px;  /* 100px height */
+    width: 90%;  /* this is not 100% so we add padding later and then we have 5% space on both ends */
+    background-color: rgba(0, 0, 0, 0);  /* background-color black */
+    padding: 0 5%;  /* The padding to push elements away from the corners */
+    transition: background-color 0.5s; /* transtion because the background-color is changed with javascript */
+}
+
+.nav-logo {
+    display: inherit;  /* To inherit the flexbox so that we position the logo and the brand name */
+    height: inherit;  /* height is also inherited */
+}
+
+.logo {
+    display: inherit; /* display is inherited from the parent element which in this case is nav-logo */
+}
+.image {
+    content: url(../images/logo.png); /* logo added through css */
+}
+.name {
+    font-size: 1.75rem; /* font size in rems */
+    margin: 0 25px; /* margins to space the logo and the name */
+    padding: 9% 0; /* top and bottom margins to stay positioned on the middle */
+}
+
+.name a {
+    text-decoration: none; /* since page name is a link we remove text-decorations */
+    color: white; /* change the color */
+
+}
+
+.nav-links {
+    display: flex; /* This creates a flexbox which makes it easier to position elements relatively to each other*/
+}
+
+.nav-link {
+    margin: 0 25px; /* space links away from each other */
+    padding: 20px 0; /* space links away from the top and also giving space to the bottom */
+}
+
+.nav-link a {
+    text-decoration: none; /* text-decoration is removed */
+    font-size: 1.25em; /* font size in rems */
+    font-weight: bold; /* font weight is given as bold */
+    color: white; /* font-color is white */
+}
+
+
+/* =============================
+here we used the ::after and ::before pseudo elements
+these add the content and style to that content BEFORE and AFTER the element in html
+this gives the content of none since we only need to mimic an underline with height of 1px
+width is 0 since after the hover effect it will be 100%, transition is .3s for all the elements which are changed
+in this case the ::before and ::after pseudo elements add an underline and overline when hovered
+================================*/
+.nav-link a::after, .nav-link a::before { 
+    content: "";
+    height: 1px;
+    width: 0;
+    display: block;
+    background: white;
+    transition: 0.3s;
+    /* margin: auto; */
+}
+
+.nav-link a::before {
+    margin-left: auto; /* this makes the line above come from the right as originally the content: '' is pushed to the right */
+}
+
+.nav-link a:hover::after, .nav-link a:hover::before {
+    width: 100%;
+}
+/* ======================================================= */
+
+
+.dropmenu {
+    display: none; /* display is none since we only need this if we use the website on smaller screens */
+}
+/* ============================================
+    Navbar styles end here
+============================================ */

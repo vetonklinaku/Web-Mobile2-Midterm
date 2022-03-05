@@ -3,10 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Washington</title>
+    <title>Washington Rent a car</title>
     <link rel="icon" href="./images/logo.png" type="image/png">
-    <!-- Linking the style file  -->
-    <link rel="stylesheet" href="CSS/style.css">
+    <!-- Index specific CSS -->
+    <link rel="stylesheet" href="CSS/index.css">
+    <!-- Linking the style file for the navbar  -->
+    <link rel="stylesheet" href="CSS/navbar.css">
     <!-- Linking the style file for the footer  -->
     <link rel="stylesheet" href="CSS/footer.css">
     <!-- Linking the javascript file  -->
@@ -219,32 +221,43 @@
 
 
             <!-- ======================= rent steps info component starts here=========================================== -->
-            <div class="rent-steps-info"> <!-- div added for having the text on top of the tab menu -->
+            <div class="rent-steps-info">
+                <!-- div added for having the text on top of the tab menu -->
                 <h6>Renting a Car has never been easier</h6>
                 <p>With no time-consuming regulations, at our company you can rent a car in less than 15 minutes.</p>
             </div>
-            <div class="easy-booking"> <!-- tab menu starts here -->
-                <div class="menu"> <!-- division for adding the tab menu options -->
-                    <a onclick="firstItem()"> <!-- functin to switch to the first menu -->
+            <div class="easy-booking">
+                <!-- tab menu starts here -->
+                <div class="menu">
+                    <!-- division for adding the tab menu options -->
+                    <a onclick="firstItem()">
+                        <!-- functin to switch to the first menu -->
                         <div class="steps" id="step1">First Step</div>
                     </a>
-                    <a onclick="secondItem()"> <!-- second menu -->
+                    <a onclick="secondItem()">
+                        <!-- second menu -->
                         <div class="steps" id="step2">Second Step</div>
                     </a>
-                    <a onclick="finalItem()"> <!-- third menu -->
+                    <a onclick="finalItem()">
+                        <!-- third menu -->
                         <div class="steps" id="step3">Final Step</div>
                     </a>
                 </div>
-                <div class="easy-booking-content"> <!-- div for the content below the tab menu options(contains 3 child divs) -->
-                    <div class="easy-booking-content-item" id="item1"> <!-- first item that contains 3 divs for adding the images and the text -->
-                        <div><img src="./images/homepage/locationIcon.png" width="150px" alt=""></div> <!-- image --> <!-- This applies for the child elements below -->
+                <div class="easy-booking-content">
+                    <!-- div for the content below the tab menu options(contains 3 child divs) -->
+                    <div class="easy-booking-content-item" id="item1">
+                        <!-- first item that contains 3 divs for adding the images and the text -->
+                        <div><img src="./images/homepage/locationIcon.png" width="150px" alt=""></div> <!-- image -->
+                        <!-- This applies for the child elements below -->
                         <div>
-                            <h6>Choose your pickup location</h6> <!-- main text --> <!-- This applies for the child elements below -->
+                            <h6>Choose your pickup location</h6> <!-- main text -->
+                            <!-- This applies for the child elements below -->
                         </div>
                         <div>
                             <p>Your first step to the greatest rented car is choosing your pick up location. With
                                 our
-                                service that can be anywhere inside the country.</p> <!-- descriptive text --> <!-- This applies for the child elements below -->
+                                service that can be anywhere inside the country.</p> <!-- descriptive text -->
+                            <!-- This applies for the child elements below -->
                         </div>
                     </div>
                     <div class="easy-booking-content-item" id="item2">
@@ -266,17 +279,19 @@
                         <div>
                             <p>For your final step just give the final personal information and your car is booked
                                 and
-                                ready. <a href="reservations.html" id="book-final-item">Book Now &#62;</a></p> <!-- This contains also an "a" tag to link to the reservations page -->
+                                ready. <a href="reservations.html" id="book-final-item">Book Now &#62;</a></p>
+                            <!-- This contains also an "a" tag to link to the reservations page -->
 
                         </div>
                     </div>
                 </div>
             </div>
             <!-- ======================= rent steps info component ends here=========================================== -->
-            
-            
+
+
             <!-- ======================= contact us component starts here=========================================== -->
-            <div class="contactUs"> <!-- parent contactUs div starts here which contains 2 child divs -->
+            <div class="contactUs">
+                <!-- parent contactUs div starts here which contains 2 child divs -->
                 <div>
                     <img src="./images/homepage/6.jpg" alt=""> <!-- image added -->
                 </div>
@@ -284,25 +299,29 @@
                     <div>
                         <h6>Our support team is available 24/7</h6> <!-- heading text -->
                     </div>
-                    <a href="mailto:washington@hotmail.com" class="contact-us-link">contact us</a> <!-- link that acts like a button that prompts the email app of the user to send to a email address -->
+                    <a href="mailto:washington@hotmail.com" class="contact-us-link">contact us</a>
+                    <!-- link that acts like a button that prompts the email app of the user to send to a email address -->
                 </div>
             </div>
             <!-- ======================= contact us component ends here=========================================== -->
-            
-            
+
+
         </div>
         <!-- ======================= homepage div ends here and below we have the footer =========================================== -->
-        
+
 
         <!-- ======================= footer starts here =========================================== -->
-        <div class="footer" style="position: absolute; background-color: rgba(0, 0, 0, 0.7);"> <!--  -->
+        <div class="footer" style="position: absolute; background-color: rgba(0, 0, 0, 0.7);">
+            <!--  -->
             <!-- Added the style here because the footer.css gives the style to every page but we need this style here, and to not overload the .css files with unnecessary content -->
-            <div class="copyright"> <!-- first div of the footer that contains the content to the left of the footer -->
+            <div class="copyright">
+                <!-- first div of the footer that contains the content to the left of the footer -->
                 <h6 class="copyrightName name"><a href="index.html">Washington Rent A Car</a></h6>
-                <h6 class="copyrightName">&copy;2021 Washington Rent A Car.</h6> 
+                <h6 class="copyrightName">&copy;2021 Washington Rent A Car.</h6>
                 <h6 class="copyrightName">All Rights Reserved.</h6>
             </div>
-            <div class="images"> <!-- second div that contains the content to the right, pictures and links of social medias -->
+            <div class="images">
+                <!-- second div that contains the content to the right, pictures and links of social medias -->
                 <a href="http://www.facebook.com" target="_blank">
                     <div class="face"></div>
                 </a>
@@ -314,9 +333,11 @@
                 </a>
             </div>
         </div>
-        <div id="butoni"> <!-- div for the scroll to top button that has the picture added through css and its appearance through javascript -->
+        <div id="butoni">
+            <!-- div for the scroll to top button that has the picture added through css and its appearance through javascript -->
             <div id="showButton">
-                <a href="#top"> <!-- link that sends to the top -->
+                <a href="#top">
+                    <!-- link that sends to the top -->
                     <div class="toTopButtonImage"></div> <!-- empty div for the image -->
                 </a>
             </div>
