@@ -8,69 +8,56 @@
     <!-- Index specific CSS -->
     <link rel="stylesheet" href="CSS/index.css">
     <!-- Linking the style file for the navbar  -->
-    <link rel="stylesheet" href="CSS/navbar.css">
+    <link rel="stylesheet" href="css/navbar.css">
     <!-- Linking the style file for the footer  -->
-    <link rel="stylesheet" href="CSS/footer.css">
+    <link rel="stylesheet" href="css/footer.css">
     <!-- Linking the javascript file  -->
-    <script defer src="./js/opacity.js"></script>
-    <script defer src="./js/index.js"></script>
-    <!-- javascript is defered so that it waits until the page loads to check for the variables,
-            this is done because in pages with a lot of content javascript can search for the 
-            id's when the element has not loaded yet and then return an error -->
+    <script defer src="js/scrollTop.js"></script>
 
-    <!-- The linkings below are for a special font which we use in all the pages(poppins) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Font awesome icons -->
+    <script src="https://kit.fontawesome.com/b05006caf7.js" crossorigin="anonymous"></script>
+    <!-- Linking the fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
 </head>
 
-<body onload="slider(), firstItem()">
-    <!-- when body loads it calls two functions, slider, and firstItem(slider is used for the slideshow at the top of the page and firstItem is used for the tab menu which is before the contact us) -->
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="../images/logo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                Washington&nbsp;Rent&nbsp;A&nbsp;Car
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+                aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cars.html">Cars</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="reservations.html">Reservation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="policies.html">Policies</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     <div class="main" id="top">
-        <!-- The parent div of all the elements opens here and contains all elements seen on the page -->
-        <div class="navbar" id="navbar">
-            <!-- Division for the navbar which 2 div and the nav tag, the two divs are for the navigation links and the logo and name, the nav tag is for the hamburger menu which appears on small screens -->
-            <div class="nav-logo">
-                <!-- the left side div for the logo and the name -->
-                <div class="logo">
-                    <!-- div for adding the photo through css and a tag so it can lead to the homepage -->
-                    <a href="index.html" class="image"></a>
-                </div>
-                <div>
-                    <!-- Div tag for the name -->
-                    <h6 class="name"><a href="index.html">Washington&nbsp;Rent&nbsp;A&nbsp;Car</a></h6>
-                    <!-- &nbsp; between words so they do not break if the screen is smaller-->
-                </div>
-            </div>
-            <div class="nav-links">
-                <!-- Navigation links div which contains 5 other divs with a tags as a child(it is done for the nav menu to lead somewhere) -->
-                <div class="nav-link"><a href="index.html">Home</a></div>
-                <div class="nav-link"><a href="about.html">About Us</a></div>
-                <div class="nav-link"><a href="cars.html">Cars</a></div>
-                <div class="nav-link"><a href="reservations.html">Reservations</a></div>
-                <div class="nav-link"><a href="policies.html">Policies</a></div>
-            </div>
-            <!-- ===============================Hamburger menu starts here=================================== -->
-            <!-- it contains two main elements and the second elements has 6 childer list-item tags with the first having the function to close the menu ("closeMenu()") -->
-
-            <div class="dropmenu">
-                <a onclick="showMenu()">
-                    <div id="menu"></div>
-                </a>
-                <div id="mobileMenu" class="drop-menu-content">
-                    <div><a onclick="closeMenu()" id="closeMenu">X</a></div>
-                    <div><a href="index.html">Home</a></div>
-                    <div><a href="about.html">About Us</a></div>
-                    <div><a href="cars.html">Cars</a></div>
-                    <div><a href="reservations.html">Reservations</a></div>
-                    <div><a href="policies.html">Policies</a></div>
-                </div>
-            </div>
-            <!-- ==============================Hamburger menu ends here==================================== -->
-
-        </div> <!-- Navbar div ends here -->
-
-
         <!-- ======================================================================= -->
         <div class="homepage">
             <!-- homepage div starts here and contains every item except the navbar and the footer -->
@@ -311,38 +298,34 @@
 
 
         <!-- ======================= footer starts here =========================================== -->
-        <div class="footer" style="position: absolute; background-color: rgba(0, 0, 0, 0.7);">
-            <!--  -->
-            <!-- Added the style here because the footer.css gives the style to every page but we need this style here, and to not overload the .css files with unnecessary content -->
-            <div class="copyright">
-                <!-- first div of the footer that contains the content to the left of the footer -->
-                <h6 class="copyrightName name"><a href="index.html">Washington Rent A Car</a></h6>
-                <h6 class="copyrightName">&copy;2021 Washington Rent A Car.</h6>
-                <h6 class="copyrightName">All Rights Reserved.</h6>
-            </div>
-            <div class="images">
-                <!-- second div that contains the content to the right, pictures and links of social medias -->
-                <a href="http://www.facebook.com" target="_blank">
-                    <div class="face"></div>
-                </a>
-                <a href="http://www.linkedin.com" target="_blank">
-                    <div class="linkedin"></div>
-                </a>
-                <a href="http://www.twitter.com" target="_blank">
-                    <div class="twitter"></div>
-                </a>
-            </div>
+        <!-- Footer Start -->
+        <div class="container">
+            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+                <div class="col-md-4 d-flex align-items-center">
+                    <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1"><i
+                            class="fa-brands fa-asymmetrik fa-3x"></i></a>
+                    <span class="text-muted">&copy; 2021 Washington Inc</span>
+                </div>
+
+                <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                    <li class="ms-3"><a class="text-muted" href="#"><i class="fa-brands fa-twitter fa-2x"></i></a></li>
+                    <li class="ms-3"><a class="text-muted" href="#"><i class="fa-brands fa-facebook fa-2x"></i></a></li>
+                    <li class="ms-3"><a class="text-muted" href="#"><i class="fa-brands fa-instagram fa-2x"></i></a>
+                    </li>
+                </ul>
+            </footer>
         </div>
+
         <div id="butoni">
             <!-- div for the scroll to top button that has the picture added through css and its appearance through javascript -->
             <div id="showButton">
                 <a href="#top">
                     <!-- link that sends to the top -->
-                    <div class="toTopButtonImage"></div> <!-- empty div for the image -->
+                    <div class="toTopButtonImage"><i class="fa-solid fa-angle-up fa-3x text-warning"></i></div>
                 </a>
             </div>
         </div>
-        <!-- ======================= footer ends here =========================================== -->
+        <!-- Footer End -->
     </div>
 </body>
 

@@ -7,13 +7,19 @@
   <link rel="icon" href="./images/logo.png" type="image/png">
   <!-- About Us specific CSS -->
   <link rel="stylesheet" href="css/aboutUs.css" />
+  <link rel="stylesheet" href="css/flipCard.css" />
   <!-- Linking the style file for the navbar  -->
-  <link rel="stylesheet" href="CSS/navbar.css">
-  <!-- Footer CSS and JS files -->
-  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/navbar.css">
+  <!-- Linking the style file for the footer  -->
+  <link rel="stylesheet" href="css/footer.css">
   <!-- Linking the javascript file  -->
-  <script defer src="./js/index.js"></script>
-  <script defer src="./js/opacity.js"></script>
+  <script defer src="js/scrollTop.js"></script>
+
+  <!-- Bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Font awesome icons -->
+  <script src="https://kit.fontawesome.com/b05006caf7.js" crossorigin="anonymous"></script>
   <!-- Linking the fonts  -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -21,279 +27,287 @@
 </head>
 
 <body>
-  <div class="main" id="top">
-    <div class="navbar" id="navbar">
-      <div class="nav-logo">
-        <div class="logo">
-          <a href="index.html" class="image"></a>
-        </div>
-        <div>
-          <h6 class="name"><a href="index.html">Washington&nbsp;Rent&nbsp;A&nbsp;Car</a></h6>
-        </div>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-black fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="../images/logo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+        Washington&nbsp;Rent&nbsp;A&nbsp;Car
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+        aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="about.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="cars.html">Cars</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="reservations.html">Reservation</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="policies.html">Policies</a>
+          </li>
+        </ul>
       </div>
-      <div class="nav-links">
-        <div class="nav-link"><a href="index.html">Home</a></div>
-        <div class="nav-link"><a href="about.html">About Us</a></div>
-        <div class="nav-link"><a href="cars.html">Cars</a></div>
-        <div class="nav-link"><a href="reservations.html">Reservations</a></div>
-        <div class="nav-link"><a href="policies.html">Policies</a></div>
-      </div>
-      <div class="dropmenu">
-        <a onclick="showMenu()">
-          <div id="menu"></div>
-        </a>
-        <div id="mobileMenu" class="drop-menu-content">
-          <div><a onclick="closeMenu()" id="closeMenu">X</a></div>
-          <div><a href="index.html">Home</a></div>
-          <div><a href="about.html">About Us</a></div>
-          <div><a href="cars.html">Cars</a></div>
-          <div><a href="reservations.html">Reservations</a></div>
-          <div><a href="policies.html">Policies</a></div>
-        </div>
-      </div>
-
-    </div> <!-- Navbar div ends here -->
-    <div class="banner">
-      <!-- Div for banner -->
     </div>
+  </nav>
+  <div class="container-fluid p-0"><img src="images/banner.jpg" class="img-fluid" alt="..."></div>
 
-    <!-- First seaction of the about us page -->
-    <div class="headers">
-      <h1>Our team</h1> <!-- Header for "Our Team" -->
-    </div>
-
-    <!-- Row 1 of our team -->
+  <!-- Team cards Start -->
+  <div class="container">
+    <h1 class="text-center my-3">Our team</h1>
     <div class="row">
-      <!-- div that will contain 3 images in a row, has flex properties to show the elements inside as a grid -->
-      <div class="person">
-        <!-- the main class of the card for "Our team" photos -->
-        <div class="personInner">
-          <!-- give the basic atributes to the card that will be fliped -->
-          <div class="personPhoto">
-            <!-- the front of the card -->
-            <div class="contentPhoto" id="veton"></div> <!-- this div contains the image -->
+      <div class="col-lg-3 col-md-6 col-sm-12 mx-sm-auto wrapper ">
+        <div class="card front-face">
+          <img src="../images/about/monika.jpg" alt="Monika">
+        </div>
+        <div class="card back-face">
+          <img src="../images/about/monika.jpg" alt="Monika">
+          <div class="info">
+            <div class="title">
+              Monika Maloku</div>
+            <p>
+              Group Leader</p>
           </div>
-          <div class="personInfo">
-            <!-- this div contains our information such as name and year of studies -->
-            <h2>Veton Klinaku</h2> <!-- name -->
-            <h3>Sophomore CIT Studnet</h3> <!-- year of studies-->
-            <h3>I am the Team Leader</h3> <!-- position of the member-->
+          <ul>
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12 mx-sm-auto wrapper">
+        <div class="card front-face">
+          <img src="./images/about/veton.jpg">
+        </div>
+        <div class="card back-face">
+          <img src="../images/about/veton.jpg">
+          <div class="info">
+            <div class="title">
+              Veton klinaku</div>
+            <p>
+              Back-end developer</p>
+          </div>
+          <ul>
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 col-sm-12 mx-sm-auto wrapper ">
+        <div class="card front-face">
+          <img src="../images/about/alisa.jpg" alt="Alisa">
+        </div>
+        <div class="card back-face">
+          <img src="../images/about/alisa.jpg" alt="Alisa">
+          <div class="info">
+            <div class="title">Alisa Qatipi</div>
+            <p>
+              Front-end developer
+          </div>
+          <ul>
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12 mx-sm-auto wrapper ">
+        <div class="card front-face">
+          <img src="/images/about/lumi.jpg">
+        </div>
+        <div class="card back-face">
+          <img src="../images/about/lumi.jpg">
+          <div class="info">
+            <div class="title">
+              Lumi Zhubi</div>
+            <p>
+              User interface designer</p>
+          </div>
+          <ul>
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Team cards End  -->
+
+  <!-- Revies Start -->
+  <div class="container">
+    <div class="row g-5">
+      <h1 class="text-center">Still not convinced?</h1>
+      <h2 class="text-center">Here are some of the reviews that people sent to us!</h2>
+
+      <div class="col-lg-4 col-md-6 col-sm-12 mb">
+        <div class="card h-100">
+          <img src="images/reviews/rev1.jpg" class="card-img-top" alt="">
+          <div class="card-header text-center">
+            <h5 class="card-title">Ilmar Munson</h5>
+          </div>
+          <div class="card-body">
+            <p class="card-text"> It's a great place to rent from because it's so cheap. Unlike other firms I've tried,
+              I've never had trouble checking in. They don't have the largest fleet, but if you're just looking for a
+              way to get around, they're ideal. Most airports are also conveniently placed! </p>
+          </div>
+          <div class="card-footer">
+            Reviewed 1 week ago
           </div>
         </div>
       </div>
-      <!--The comments above are valid for the next 4 elements too -->
-      <div class="person">
-        <div class="personInner">
-          <div class="personPhoto">
-            <div class="contentPhoto" id="deti"></div>
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="card h-100">
+          <img src="images/reviews/rev2.jpg" class="card-img-top" alt="">
+          <div class="card-header text-center">
+            <h5 class="card-title">Luka Paulis</h5>
           </div>
-          <div class="personInfo">
-            <h2>Monika Maloku</h2>
-            <h3>Sophomore CIT Studnet</h3>
-            <h3>I am the Frontend Developer</h3>
+          <div class="card-body">
+            <p class="card-text">This is the most affordable automobile rental provider. Customer service is excellent,
+              and automobile availability is adequate. All of the vehicles are clean and mechanically sound, making them
+              suitable for driving to work or on lengthy road trips. Overall, it was a pleasant experience with a wide
+              range of vehicles to chose from. </p>
+          </div>
+          <div class="card-footer">
+            Reviewed 3 week ago
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="card h-100">
+          <img src="images/reviews/rev3.jpg" class="card-img-top" alt="">
+          <div class="card-header text-center">
+            <h5 class="card-title">Lhamo Ljungman</h5>
+          </div>
+          <div class="card-body">
+            <p class="card-text"> For a long time, I've been intending to write this review! I'm quite sure I'll be
+              renting cars from WASHINGTON from now on!! After being rejected down by "the other rental company," I came
+              in. I was in tears as I made my way to my younger brother's burial. They promptly and painlessly took care
+              of me, and I was on my way. They are significantly more reasonable, have excellent vehicles, and do not
+              require a deposit!! </p>
+          </div>
+          <div class="card-footer">
+            Reviewed 5 week ago
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="card h-100">
+          <img src="images/reviews/rev4.jpg" class="card-img-top" alt="">
+          <div class="card-header text-center">
+            <h5 class="card-title">Celia Sala</h5>
+          </div>
+          <div class="card-body">
+            <p class="card-text"> I rented a car from WASHINGTON many times for approximately a week. They offer
+              excellent selections of
+              automobiles in
+              each category. If I need a certain automobile and have a lot of options, I always go to the airport since
+              they have a
+              lot of cars. They provide excellent service with no complaints. I am satisfied with their service, and the
+              rent is
+              fairly affordable.</p>
+          </div>
+          <div class="card-footer">
+            Reviewed 6 week ago
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="card h-100">
+          <img src="images/reviews/rev5.jpg" class="card-img-top" alt="">
+          <div class="card-header text-center">
+            <h5 class="card-title">Hiltraud Boesch</h5>
+          </div>
+          <div class="card-body">
+            <p class="card-text"> Excellent service with a wide range of automobiles to pick from at reasonable prices!
+              The entire procedure of renting a car, picking it up, and returning it went without a hitch; I'd strongly
+              suggest it!</p>
+          </div>
+          <div class="card-footer">
+            Reviewed 2 months ago
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="card h-100">
+          <img src="images/reviews/rev6.jpg" class="card-img-top" alt="">
+          <div class="card-header text-center">
+            <h5 class="card-title">Persephone Lindsey</h5>
+          </div>
+          <div class="card-body">
+            <p class="card-text"> Excellent customer service. Before we had left the lot, we discovered that our
+              automobile required an oil
+              change. The
+              staff were quite accommodating and allowed us to exchange cars. I really enjoy that you may select your
+              desired
+              automobile through the App. When we arrived at our location, the app presented us with numerous
+              possibilities from which
+              to pick. It was fantastic.</p>
+          </div>
+          <div class="card-footer">
+            Reviewed 3 months ago
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- Row 2 of Our Team -->
-    <div class="row">
-
-      <div class="person">
-        <div class="personInner">
-          <div class="personPhoto">
-            <div class="contentPhoto" id="lumi"></div>
-          </div>
-          <div class="personInfo">
-            <h2>Lumi Zhubi</h2>
-            <h3>Sophomore CIT Studnet</h3>
-            <h3>I am the Backend Developer</h3>
-          </div>
-        </div>
-      </div>
-      <div class="person">
-        <div class="personInner">
-          <div class="personPhoto">
-            <div class="contentPhoto" id="eris"></div>
-          </div>
-          <div class="personInfo">
-            <h2>Alisa Qatipi</h2>
-            <h3>Sophomore CIT Studnet</h3>
-            <h3>I am the Graphic Designer</h3>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Costumer Reviews  Start-->
-    <div class="headers">
-      <!-- Header for costumer reviews-->
-      <h1>Still not convinced?</h1>
-      <h2>Here are some of the reviews that people sent to us!</h2>
-    </div>
-    <div class="row">
-      <!-- div that will contain 4 card in a row, has flex properties to show the elements in grid format -->
-      <div class="card">
-        <!-- the main class of the reviews card, has all the attributes for width, flex, border radius and much more -->
-        <div id="rev1" class="cardImg">
-          <!-- div to hold the image of the card-->
-          <!-- Image of first review -->
-        </div>
-        <div class="cardBody">
-          <!-- div to hold the review from the consumer-->
-          <h5>Ilmar Munson</h5> <!-- name of the consumer-->
-          <p>
-            It's a great place to rent from because it's so cheap. Unlike other firms I've tried, I've never had trouble
-            checking
-            in. They don't have the largest fleet, but if you're just looking for a way to get around, they're ideal.
-            Most airports
-            are also conveniently placed!
-          </p> <!-- the actuall review of the consumer-->
-        </div>
-        <div class="cardFooter">
-          <p>Reviewed 1 week ago</p> <!-- a footer for the card, tells how long has been since the review-->
-        </div>
-      </div>
-      <!--The comments above are valid for the next 3 elements too -->
-
-      <div class="card">
-        <div id="rev2" class="cardImg">
-          <!-- Image of second review -->
-        </div>
-        <div class="cardBody">
-          <h5>Luka Paulis</h5>
-          <p>
-            This is the most affordable automobile rental provider.
-            Customer service is excellent, and automobile availability is adequate.
-            All of the vehicles are clean and mechanically sound, making them suitable for driving to work or on lengthy
-            road trips.
-            Overall, it was a pleasant experience with a wide range of vehicles to chose from.
-          </p>
-        </div>
-        <div class="cardFooter">
-          <p>Reviewed 3 week ago</p>
-        </div>
-      </div>
-      <div class="card">
-        <div id="rev3" class="cardImg">
-          <!-- Image of third review -->
-        </div>
-        <div class="cardBody">
-          <h5>Lhamo Ljungman</h5>
-          <p>
-            For a long time, I've been intending to write this review! I'm quite sure I'll be renting cars from
-            WASHINGTON from now
-            on!! After being rejected down by "the other rental company," I came in. I was in tears as I made my way to
-            my younger
-            brother's burial. They promptly and painlessly took care of me, and I was on my way. They are significantly
-            more
-            reasonable, have excellent vehicles, and do not require a deposit!!
-          </p>
-        </div>
-        <div class="cardFooter">
-          <p>Reviewed 5 week ago</p>
-        </div>
-      </div>
-      <div class="card">
-        <div id="rev4" class="cardImg">
-          <!-- Image of fourth review -->
-        </div>
-        <div class="cardBody">
-          <h5>Celia Sala</h5>
-          <p>
-            I rented a car from WASHINGTON many times for approximately a week. They offer excellent selections of
-            automobiles in
-            each category. If I need a certain automobile and have a lot of options, I always go to the airport since
-            they have a
-            lot of cars. They provide excellent service with no complaints. I am satisfied with their service, and the
-            rent is
-            fairly affordable.
-          </p>
-        </div>
-        <div class="cardFooter">
-          <p>Reviewed 6 week ago</p>
-        </div>
-      </div>
-      <div class="card">
-        <div id="rev5" class="cardImg">
-          <!-- Image of fourth review -->
-        </div>
-        <div class="cardBody">
-          <h5>Hiltraud Boesch</h5>
-          <p>
-            Excellent service with a wide range of automobiles to pick from at reasonable prices!
-            The entire procedure of renting a car, picking it up, and returning it went without a hitch; I'd strongly
-            suggest it!
-          </p>
-        </div>
-        <div class="cardFooter">
-          <p>Reviewed 2 months ago</p>
-        </div>
-      </div>
-      <div class="card">
-        <div id="rev6" class="cardImg">
-          <!-- Image of fourth review -->
-        </div>
-        <div class="cardBody">
-          <h5>Persephone Lindsey</h5>
-          <p>
-            Excellent customer service. Before we had left the lot, we discovered that our automobile required an oil
-            change. The
-            staff were quite accommodating and allowed us to exchange cars. I really enjoy that you may select your
-            desired
-            automobile through the App. When we arrived at our location, the app presented us with numerous
-            possibilities from which
-            to pick. It was fantastic.
-          </p>
-        </div>
-        <div class="cardFooter">
-          <p>Reviewed 3 months ago</p>
-        </div>
-      </div>
-    </div>
-    <!-- Costumer Reviews  End-->
-
-    <!-- Location Start -->
-    <div class="headers">
-      <!-- Header section for Location-->
-      <h1>Our Location</h1>
+  <!-- Location Start -->
+  <div class="container">
+    <h1 class="text-center my-5">Our Location</h1>
+    <div class="d-flex justify-content-center">
       <iframe id="map" loading="lazy" frameborder="0"
         src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11734.304791446119!2d21.1922622!3d42.6703355!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xbbf87d6b640faf83!2sThe%20American%20University%20in%20Kosovo!5e0!3m2!1sen!2s!4v1638887637369!5m2!1sen!2s">
       </iframe>
-      <!-- this is a google map iframe autogenerated from the website, currently it is pining RIT Kosovo just as an example-->
     </div>
-    <!-- Location End  -->
-
-    <!-- Footer Start -->
-    <div class="footer">
-      <div class="copyright">
-        <h6 class="copyrightName name">
-          <a href="index.html">Washington Rent A Car</a>
-        </h6>
-        <h6 class="copyrightName">&copy;2021 Washington Rent A Car.</h6>
-        <h6 class="copyrightName">All Rights Reserved.</h6>
-      </div>
-      <div class="images">
-        <a href="http://www.facebook.com" target="_blank">
-          <div class="face"></div>
-        </a>
-        <a href="http://www.linkedin.com" target="_blank">
-          <div class="linkedin"></div>
-        </a>
-        <a href="http://www.twitter.com" target="_blank">
-          <div class="twitter"></div>
-        </a>
-      </div>
-    </div>
-    <div id="butoni">
-      <div id="showButton">
-        <a href="#top">
-          <div class="toTopButtonImage"></div>
-        </a>
-      </div>
-    </div>
-    <!-- Footer End -->
   </div>
+  <div class="headers">
+    <!-- Header section for Location-->
+    <!-- this is a google map iframe autogenerated from the website, currently it is pining RIT Kosovo just as an example-->
+  </div>
+  <!-- Location End  -->
+
+  <!-- Footer Start -->
+  <div class="container">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+      <div class="col-md-4 d-flex align-items-center">
+        <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1"><i
+            class="fa-brands fa-asymmetrik fa-3x"></i></a>
+        <span class="text-muted">&copy; 2021 Washington Inc</span>
+      </div>
+
+      <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+        <li class="ms-3"><a class="text-muted" href="#"><i class="fa-brands fa-twitter fa-2x"></i></a></li>
+        <li class="ms-3"><a class="text-muted" href="#"><i class="fa-brands fa-facebook fa-2x"></i></a></li>
+        <li class="ms-3"><a class="text-muted" href="#"><i class="fa-brands fa-instagram fa-2x"></i></a></li>
+      </ul>
+    </footer>
+  </div>
+
+  <div id="butoni">
+    <!-- div for the scroll to top button that has the picture added through css and its appearance through javascript -->
+    <div id="showButton">
+      <a href="#top">
+        <!-- link that sends to the top -->
+        <div class="toTopButtonImage"><i class="fa-solid fa-angle-up fa-3x text-warning"></i></div>
+      </a>
+    </div>
+  </div>
+  <!-- Footer End -->
 </body>
 
 </html>

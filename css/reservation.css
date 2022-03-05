@@ -67,10 +67,9 @@
 	display: inline-block;
 	transition: background-color 0.6s ease;
 }
-/* Change the color of the active photo*/
-.active, .dot:hover {
+/* .active, .dot:hover {
 	background-color: #fa8e00;
-}
+} */
 
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
