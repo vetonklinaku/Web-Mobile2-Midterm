@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/footer.css">
     <!-- Linking the javascript file  -->
     <script defer src="js/scrollTop.js"></script>
+    <script defer src="js/index.js"></script>
 
     <!-- Bootstrap CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -26,17 +27,18 @@
 </head>
 
 <body>
+    <!-- Nav Bar Start -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-black fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html">
                 <img src="./images/logo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
                 Washington&nbsp;Rent&nbsp;A&nbsp;Car
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
-                aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerCars"
+                aria-controls="navbarTogglerCars" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <div class="collapse navbar-collapse" id="navbarTogglerCars">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="index.html">Home</a>
@@ -57,275 +59,200 @@
             </div>
         </div>
     </nav>
-    <div class="main" id="top">
-        <!-- ======================================================================= -->
-        <div class="homepage">
-            <!-- homepage div starts here and contains every item except the navbar and the footer -->
-            <div class="homepageImage">
-                <!-- The div to add the hero image and the text on top of it, contains 2 main elements, the img and a division with the text tags for adding the text on top of the image -->
-                <img src="./images/homepage/4.jpg" alt="" id="slideImg">
-                <div class="text">
-                    <h6 id="firstTxt">The definition of a royal ride</h6>
-                    <h6 id="scndTxt">Rent your car Today!</h6>
-                    <a href="reservations.html" class="linkTxt">
-                        <!-- a tag that links to the reservation page but looks like a button -->
-                        <h6>Rent Car Now</h6>
-                    </a>
-                </div>
-            </div> <!-- Homepage hero image div ends here -->
-            <!-- ======================================================================= -->
+    <!-- Nav Bar End -->
 
+    <!-- Banner Start -->
+    <div class="container-fluid text-center text-white" id="startBanner">
+        <h3>The definition of a royal ride</h3>
+        <h1>Rent your car Today!</h1>
+        <a class="btn btn-warning mt-3 text-white rounded-pill" href="reservations.html" id="btnBanner">
+            <h4>Rent Car Now <i class="fa-solid fa-arrow-right d-inline"></i></h4>
+        </a>
+    </div>
+    <!-- Banner End -->
 
-            <!-- ========================== why-us component starts here ======================================== -->
-            <div class="why-us">
-                <!-- why-us div starts here and contains 2 main divs and the second div is a parent of 3 other divs and each of those divs are parents of 2 other divs -->
-                <div class="question">
-                    <h6>With so many options out there, why us?</h6> <!-- Text on top of the cards -->
-                    <p>Some of our benefits</p> <!-- Text on top of the cards -->
-                </div>
-                <div class="services">
-                    <!-- div for the cards starts here -->
-                    <div class="services-item">
-                        <!-- first card item -->
-                        <div class="services-item-photo"><img src="./images/homepage/savingsIcon.png" width="25px"
-                                alt=""> <!-- Card item logo -->
-                            <h6>special prices</h6> <!-- Card item text on the right -->
-                        </div>
-                        <div>
-                            <p>Using our services you are guaranteed the least-costly price available. Our company has
-                                <!-- Card item description -->
-                                ranked first in the affordability grade for the last 5 years, and we are focused on
-                                providing the very best for our customers.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="services-item">
-                        <!-- Card item, the layout is the same for all 3 divs inside of serices class, because we want the cards to look the same -->
-                        <div class="services-item-photo"><img src="./images/homepage/SafetyIcon.png" width="25px"
-                                alt="">
-                            <h6>safest option</h6>
-                        </div>
-                        <div>
-                            <p>By using our service you are doing yourself a favour. With our vehicles you won't have to
-                                worry about safety at any time. Safety is our number one priority on and off the road.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="services-item">
-                        <div class="services-item-photo"><img src="./images/homepage/timeSavingIcon.png" width="25px"
-                                alt="">
-                            <h6>time efficient</h6>
-                        </div>
-                        <div>
-                            <p>Easy and time-efficient booking at multiple points across the country and online using
-                                our website platform. No excessive time&#8209;consuming regulations, pick your car and
-                                go.</p>
-                        </div>
-                    </div>
-                </div> <!-- Services div ends here -->
-            </div>
-            <!-- =======================why-us component ends here================= -->
-
-
-            <!-- ======================= quality of the cars component starts here=========================================== -->
-            <div class="quality">
-                <!-- parent div of the quality component -->
-                <div class="car-quality" id="scnd-component">
-                    <!-- second div of the main component which is a parent of 2 divs-->
-                    <div>
-                        <!-- first div that contains the text originally on the left -->
-                        <div>
-                            <h6>A piece of our fleet</h6>
-                        </div>
-                        <div>
-                            <p>Each piece of our fleet is chosen carefully with great attention to detail.</p>
-                            <a href="cars.html" class="linkTxt our-fleet-link">Our&nbsp;fleet</a>
-                        </div>
-                    </div>
-                    <div>
-                        <!-- second div that contains the image and also the buttons to change the pictures through the javascript functions called -->
-                        <h6 id="slideshow-buttons">
-                            <div><img src="./images/homepage/fleet1.jpg" id="fleetImg" alt=""></div>
-
-                            <div class="slideshow-next-prev-buttons">
-                                <a onclick="prev(1)" class="next-prev-buttons">&#10094;</a>
-                                <a onclick="next(1)" class="next-prev-buttons">&#10095;</a>
-                            </div>
-                        </h6>
-                    </div>
+    <div class="container">
+        <!-- Why Us Start  -->
+        <h2 class="text-center mt-5 mb-3">WITH SO MANY OPTIONS OUT THERE, WHY US?</h2>
+        <h4 class="text-center mb-5">Some of our benefits</h4>
+        <div class="row gy-5">
+            <div class="col-lg-4 col-md-4 col-sm-12 ">
+                <div class="bg-warning rounded p-4 benefits">
+                    <i class="fa-solid fa-circle-dollar-to-slot fa-3x d-inline"></i>
+                    <h3 class="d-inline ms-3">SPECIAL PRICES</h3>
+                    <p class="mt-3  fs-5">
+                        Using our services you are guaranteed the least-costly price available. Our company has ranked
+                        first in the affordability grade for the last 5 years, and we are focused on providing the very
+                        best for our customers.
+                    </p>
                 </div>
             </div>
-            <!-- ======================= quality of the cars component ends here=========================================== -->
-
-
-            <!-- ======================= achievments of the cars component starts here=========================================== -->
-            <div class="achievments">
-                <!-- parent div that contains  -->
-                <img src="./images/homepage/5.jpg" alt=""> <!-- image added -->
-                <div class="achievment-text">
-                    <!-- parent div of 4 other divs that contain the counters and also the icons which are added through css -->
-                    <div class="counter-icon">
-                        <!-- first counter -->
-                        <div id="clients"></div> <!-- icon added through css -->
-                        <div>
-                            <h6>400,000+</h6> <!-- div and h6 tag for the clients counter -->
-                        </div>
-                        <div>
-                            <p>Clients Served</p> <!-- div and p tag for the text -->
-                        </div>
-                    </div>
-                    <div class="counter-icon">
-                        <!-- second counter -->
-                        <div id="cities"></div> <!-- icon added through css -->
-                        <div>
-                            <h6>48</h6> <!-- div and h6 tag for the clients counter -->
-                        </div>
-                        <div>
-                            <p>Cities</p><!-- div and p tag for the text -->
-                        </div>
-                    </div>
-                    <div class="counter-icon">
-                        <div id="members"></div> <!-- icon added through css -->
-                        <div>
-                            <h6>30,000+</h6> <!-- div and h6 tag for the clients counter -->
-                        </div>
-                        <div>
-                            <p>Registered Members</p> <!-- div and p tag for the text -->
-                        </div>
-                    </div>
-                    <div class="counter-icon">
-                        <div id="cars"></div> <!-- icon added through css -->
-                        <div>
-                            <h6>350+</h6> <!-- div and h6 tag for the clients counter -->
-                        </div>
-                        <div>
-                            <p>Available Cars</p> <!-- div and p tag for the text -->
-                        </div>
-                    </div>
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                <div class="bg-warning rounded p-4 benefits">
+                    <i class="fa-solid fa-shield fa-3x d-inline"></i>
+                    <h3 class="d-inline ms-3">SAFEST OPTION</h3>
+                    <p class="mt-3 fs-5">By using our service you are doing yourself a favour. With our vehicles you
+                        won't have to worry about safety at any time. Safety is our number one priority on and off the
+                        road.</p>
                 </div>
             </div>
-            <!-- ======================= achievments of the cars component ends here=========================================== -->
-
-
-            <!-- ======================= rent steps info component starts here=========================================== -->
-            <div class="rent-steps-info">
-                <!-- div added for having the text on top of the tab menu -->
-                <h6>Renting a Car has never been easier</h6>
-                <p>With no time-consuming regulations, at our company you can rent a car in less than 15 minutes.</p>
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                <div class="bg-warning rounded p-4 benefits">
+                    <i class="fa-solid fa-hourglass fa-3x d-inline"></i>
+                    <h3 class="d-inline ms-3">TIME EFFICIENT</h3>
+                    <p class="mt-3 fs-5">Easy and time-efficient booking at multiple points across the country and
+                        online using our website platform. No excessive time‑consuming regulations, pick your car and
+                        go.</p>
+                </div>
             </div>
-            <div class="easy-booking">
-                <!-- tab menu starts here -->
+        </div>
+        <!-- Why Us End -->
+
+        <!-- Fleet Start -->
+        <div class="row mt-5 mb-5 gy-4">
+            <div class="col-lg-5 col-md-6 col-sm-12 ">
+                <h2>A PIECE OF OUR FLEET</h2>
+                <p class="fs-4">Each piece of our fleet is chosen carefully with great attention to detail.</p>
+                <a href="cars.html" class="btn btn-lg btn-outline-warning text-black">Our fleet</a>
+            </div>
+            <div class="col-lg-7 col-md-6 col-sm-12">
+                <div id="carCarusel" class="carousel slide rounded" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="2500">
+                            <img src="./images/homepage/fleet1.jpg" class="d-block w-100" alt="Fleet 1">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="2500">
+                            <img src="./images/homepage/fleet2.jpg" class="d-block w-100" alt="Fleet 2">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="2500">
+                            <img src="./images/homepage/fleet3.jpg" class="d-block w-100" alt="Fleet 3">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev text-warning" type="button" data-bs-target="#carCarusel"
+                        data-bs-slide="prev">
+                        <i class="fa-solid fa-circle-left fa-2x" aria-hidden="true"></i>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next text-warning" type="button" data-bs-target="#carCarusel"
+                        data-bs-slide="next">
+                        <i class="fa-solid fa-circle-right fa-2x" aria-hidden="true"></i>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Fleet End -->
+    </div>
+
+    <!-- Statistics Start -->
+    <div class="container-fluid p-0 text-white" id="OldBanner">
+        <div class="row mt-5 mb-5">
+            <div class="col-3 text-center pt-5">
+                <i class="fa-solid fa-user-group fa-3x text-warning"></i>
+                <h2>400,000+</h2>
+                <h3>CLIENTS SERVED</h3>
+            </div>
+            <div class="col-3 text-center pt-5">
+                <i class="fa-solid fa-city fa-3x text-warning"></i>
+                <h2>48</h2>
+                <h3>Cities</h3>
+            </div>
+            <div class="col-3 text-center pt-5">
+                <i class="fa-solid fa-user-plus fa-3x text-warning"></i>
+                <h2>30,000+</h2>
+                <h3>REGISTERED MEMBERS</h3>
+            </div>
+            <div class="col-3 p-3 text-center pt-5">
+                <i class="fa-solid fa-car fa-3x text-warning"></i>
+                <h2>3500+</h2>
+                <h3>AVAILABLE CARS</h3>
+            </div>
+        </div>
+    </div>
+    <!-- Statistics End -->
+
+    <!-- Steps Start -->
+    <div class="container mt-5">
+        <h1 class="text-capitalize text-center mt-5">renting a car has never been easier</h1>
+        <p class="text-muted text-center">With no time-consuming regulations, at our company you can rent a car in less
+            than 15 minutes.</p>
+        <div class="row mt-3">
+            <div class="col-8 offset-2">
                 <div class="menu">
-                    <!-- division for adding the tab menu options -->
                     <a onclick="firstItem()">
-                        <!-- functin to switch to the first menu -->
                         <div class="steps" id="step1">First Step</div>
                     </a>
                     <a onclick="secondItem()">
-                        <!-- second menu -->
                         <div class="steps" id="step2">Second Step</div>
                     </a>
                     <a onclick="finalItem()">
-                        <!-- third menu -->
                         <div class="steps" id="step3">Final Step</div>
                     </a>
                 </div>
-                <div class="easy-booking-content">
-                    <!-- div for the content below the tab menu options(contains 3 child divs) -->
-                    <div class="easy-booking-content-item" id="item1">
-                        <!-- first item that contains 3 divs for adding the images and the text -->
-                        <div><img src="./images/homepage/locationIcon.png" width="150px" alt=""></div> <!-- image -->
-                        <!-- This applies for the child elements below -->
-                        <div>
-                            <h6>Choose your pickup location</h6> <!-- main text -->
-                            <!-- This applies for the child elements below -->
-                        </div>
-                        <div>
-                            <p>Your first step to the greatest rented car is choosing your pick up location. With
-                                our
-                                service that can be anywhere inside the country.</p> <!-- descriptive text -->
-                            <!-- This applies for the child elements below -->
-                        </div>
+                <div class="easy-booking-content text-center">
+                    <div class="" id="item1">
+                        <i class="fa-solid fa-location-dot fa-6x my-2 text-warning"></i>
+                        <h3>CHOOSE YOUR PICKUP LOCATION</h3>
+                        <p>Your first step to the greatest rented car is choosing your pick up location. With our
+                            service that can be anywhere inside the country.</p>
                     </div>
-                    <div class="easy-booking-content-item" id="item2">
-                        <div><img src="./images/homepage/calendarIcon.png" width="150px" alt=""></div>
-                        <div>
-                            <h6>Choose your pickup date</h6>
-                        </div>
-                        <div>
-                            <p>The second step is choosing your pickup date. You can book your car up to two months
-                                in
-                                advance.</p>
-                        </div>
+                    <div class="" id="item2">
+                        <i class="fa-solid fa-calendar-days fa-6x my-2 text-warning"></i>
+                        <h3>Choose your pickup date</h3>
+                        <p>The second step is choosing your pickup date. You can book your car up to two months in
+                            advance.</p>
                     </div>
-                    <div class="easy-booking-content-item" id="item3">
-                        <div><img src="./images/homepage/bookedIcon.png" width="150px" alt=""></div>
-                        <div>
-                            <h6>You are good to go</h6>
-                        </div>
-                        <div>
-                            <p>For your final step just give the final personal information and your car is booked
-                                and
-                                ready. <a href="reservations.html" id="book-final-item">Book Now &#62;</a></p>
-                            <!-- This contains also an "a" tag to link to the reservations page -->
-
-                        </div>
+                    <div class="" id="item3">
+                        <i class="fa-solid fa-calendar-check fa-6x my-2 text-warning"></i>
+                        <h3>You are good to go</h3>
+                        <p>For your final step just give the final personal information and your car is booked and
+                            ready.</p>
+                        <a href="reservations.html" id="book-final-item"
+                            class="text-black text-decoration-none p-2">Book Now &#62;</a>
                     </div>
                 </div>
             </div>
-            <!-- ======================= rent steps info component ends here=========================================== -->
+        </div>
+    </div>
+    <!-- Steps End -->
 
+    <!-- Footer Banner Start -->
+    <div class="container-fluid text-black text-center" id="bottomBanner">
+        <h1>Our support tean us available 24/7</h1>
+        <a class="btn btn-warning mt-3 text-white rounded-pill" href="mailto:reservation@washington.com" id="btnBanner">
+            <h4>Contact Us</h4>
+        </a>
+    </div>
+    <!-- Footer Banner End -->
 
-            <!-- ======================= contact us component starts here=========================================== -->
-            <div class="contactUs">
-                <!-- parent contactUs div starts here which contains 2 child divs -->
-                <div>
-                    <img src="./images/homepage/6.jpg" alt=""> <!-- image added -->
-                </div>
-                <div class="supportTeam">
-                    <div>
-                        <h6>Our support team is available 24/7</h6> <!-- heading text -->
-                    </div>
-                    <a href="mailto:washington@hotmail.com" class="contact-us-link">contact us</a>
-                    <!-- link that acts like a button that prompts the email app of the user to send to a email address -->
-                </div>
+    <!-- Footer Start -->
+    <div class="container-fluid">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            <div class="col-md-4 d-flex align-items-center">
+                <a href="index.html" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1"><i
+                        class="fa-brands fa-asymmetrik fa-3x"></i></a>
+                <span class="text-muted">&copy; 2021 Washington Inc</span>
             </div>
-            <!-- ======================= contact us component ends here=========================================== -->
 
+            <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                <li class="ms-3"><a class="text-muted" href="https://twitter.com/"><i class="fa-brands fa-twitter fa-2x"></i></a></li>
+                <li class="ms-3"><a class="text-muted" href="https://www.facebook.com/"><i class="fa-brands fa-facebook fa-2x"></i></a></li>
+                <li class="ms-3"><a class="text-muted" href="https://www.instagram.com/"><i class="fa-brands fa-instagram fa-2x"></i></a>
+                </li>
+            </ul>
+        </footer>
+    </div>
 
+    <div id="butoni">
+        <!-- div for the scroll to top button that has the picture added through css and its appearance through javascript -->
+        <div id="showButton">
+            <a href="#top">
+                <!-- link that sends to the top -->
+                <div class="toTopButtonImage"><i class="fa-solid fa-angle-up fa-3x text-warning"></i></div>
+            </a>
         </div>
-        <!-- ======================= homepage div ends here and below we have the footer =========================================== -->
-
-
-        <!-- ======================= footer starts here =========================================== -->
-        <!-- Footer Start -->
-        <div class="container-fluid">
-            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-                <div class="col-md-4 d-flex align-items-center">
-                    <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1"><i
-                            class="fa-brands fa-asymmetrik fa-3x"></i></a>
-                    <span class="text-muted">&copy; 2021 Washington Inc</span>
-                </div>
-
-                <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-                    <li class="ms-3"><a class="text-muted" href="#"><i class="fa-brands fa-twitter fa-2x"></i></a></li>
-                    <li class="ms-3"><a class="text-muted" href="#"><i class="fa-brands fa-facebook fa-2x"></i></a></li>
-                    <li class="ms-3"><a class="text-muted" href="#"><i class="fa-brands fa-instagram fa-2x"></i></a>
-                    </li>
-                </ul>
-            </footer>
-        </div>
-
-        <div id="butoni">
-            <!-- div for the scroll to top button that has the picture added through css and its appearance through javascript -->
-            <div id="showButton">
-                <a href="#top">
-                    <!-- link that sends to the top -->
-                    <div class="toTopButtonImage"><i class="fa-solid fa-angle-up fa-3x text-warning"></i></div>
-                </a>
-            </div>
-        </div>
-        <!-- Footer End -->
+    </div>
+    <!-- Footer End -->
     </div>
 </body>
 
