@@ -1,0 +1,16 @@
+.carousel-indicators button[data-bs-target] {
+    width: 200px;
+    height: 100%;
+    opacity: 0.9;
+    border: 1px solid #000;
+    transform: translate(0,100px);
+}
+.carousel-item img{
+    border-radius: 25px;
+}
+#submitBtn{
+    transition: 0.2s;
+}
+#submitBtn:hover{
+    transform: scale(1.2);
+}
