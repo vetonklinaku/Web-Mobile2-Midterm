@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE php>
+<php lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -34,7 +34,7 @@
     <div class="container-fluid text-center text-white" id="startBanner">
         <h3>The definition of a royal ride</h3>
         <h1>Rent your car Today!</h1>
-        <a class="btn btn-warning mt-3 text-white rounded-pill" href="reservations.html" id="btnBanner">
+        <a class="btn btn-warning mt-3 text-white rounded-pill" href="reservations.php" id="btnBanner">
             <h4>Rent Car Now <i class="fa-solid fa-arrow-right d-inline"></i></h4>
         </a>
     </div>
@@ -82,7 +82,7 @@
             <div class="col-lg-5 col-md-6 col-sm-12 ">
                 <h2>A PIECE OF OUR FLEET</h2>
                 <p class="fs-4">Each piece of our fleet is chosen carefully with great attention to detail.</p>
-                <a href="cars.html" class="btn btn-lg btn-outline-warning text-black">Our fleet</a>
+                <a href="cars.php" class="btn btn-lg btn-outline-warning text-black">Our fleet</a>
             </div>
             <div class="col-lg-7 col-md-6 col-sm-12">
                 <div id="carCarusel" class="carousel slide rounded" data-bs-ride="carousel">
@@ -176,7 +176,7 @@
                         <h3>You are good to go</h3>
                         <p>For your final step just give the final personal information and your car is booked and
                             ready.</p>
-                        <a href="reservations.html" id="book-final-item"
+                        <a href="reservations.php" id="book-final-item"
                             class="text-black text-decoration-none p-2">Book Now &#62;</a>
                     </div>
                 </div>
@@ -190,4 +190,4 @@
 
 </body>
 
-</html>
+</php>

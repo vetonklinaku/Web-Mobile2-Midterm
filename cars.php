@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE php>
+<php lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -28,7 +28,6 @@
     <!-- Nav bar Start --> 
     <?php include("common/navbar.php"); ?>
     <!-- Nav bar End  -->
-
     <div class="container text-capitalize">
         <!-- Title of the page -->
         <div class="row mt-5">
@@ -44,7 +43,7 @@
                         <p class="card-text fs-5">
                             Black, Gasoline, 5 Adults, 3 bags, 5 doors
                         </p>
-                        <a href="reservations.html" class="btn btn-lg btn-outline-warning text-black">
+                        <a href="reservations.php" class="btn btn-lg btn-outline-warning text-black">
                             Reserve now</a>
                     </div>
                 </div>
@@ -57,7 +56,7 @@
                         <p class="card-text fs-5">
                             Orange, Gasoline, 4 Adults, 3 bags, 3 doors
                         </p>
-                        <a href="reservations.html" class="btn btn-lg btn-outline-warning text-black">Reserve now</a>
+                        <a href="reservations.php" class="btn btn-lg btn-outline-warning text-black">Reserve now</a>
                     </div>
                 </div>
             </div>
@@ -69,7 +68,7 @@
                         <p class="card-text fs-5">
                             White, Electric, 5 Adults, 4 bags, 5 doors
                         </p>
-                        <a href="reservations.html" class="btn btn-lg btn-outline-warning text-black">Reserve now</a>
+                        <a href="reservations.php" class="btn btn-lg btn-outline-warning text-black">Reserve now</a>
                     </div>
                 </div>
             </div>
@@ -81,7 +80,7 @@
                         <p class="card-text fs-5">
                             Black, Electric, 5 Adults, 3 bags, 5 doors
                         </p>
-                        <a href="reservations.html" class="btn btn-lg btn-outline-warning text-black">Reserve now</a>
+                        <a href="reservations.php" class="btn btn-lg btn-outline-warning text-black">Reserve now</a>
                     </div>
                 </div>
             </div>
@@ -93,7 +92,7 @@
                         <p class="card-text fs-5">
                             Grey, Gasoline, 5 Adults, 3 bags, 5 doors
                         </p>
-                        <a href="reservations.html" class="btn btn-lg btn-outline-warning text-black">Reserve now</a>
+                        <a href="reservations.php" class="btn btn-lg btn-outline-warning text-black">Reserve now</a>
                     </div>
                 </div>
             </div>
@@ -105,7 +104,7 @@
                         <p class="card-text fs-5">
                             White, Hybrid, 5 Adults, 3 bags, 5 doors
                         </p>
-                        <a href="reservations.html" class="btn btn-lg btn-outline-warning text-black">Reserve now</a>
+                        <a href="reservations.php" class="btn btn-lg btn-outline-warning text-black">Reserve now</a>
                     </div>
                 </div>
             </div>
@@ -117,7 +116,7 @@
                         <p class="card-text fs-5">
                             Grey, Gasoline, 4 Adults, 2 bags, 3 doors
                         </p>
-                        <a href="reservations.html" class="btn btn-lg btn-outline-warning text-black">Reserve now</a>
+                        <a href="reservations.php" class="btn btn-lg btn-outline-warning text-black">Reserve now</a>
                     </div>
                 </div>
             </div>
@@ -129,7 +128,7 @@
                         <p class="card-text fs-5">
                             White, Diesel, 5 Adults, 4 bags, 5 doors
                         </p>
-                        <a href="reservations.html" class="btn btn-lg btn-outline-warning text-black">Reserve now</a>
+                        <a href="reservations.php" class="btn btn-lg btn-outline-warning text-black">Reserve now</a>
                     </div>
                 </div>
             </div>
@@ -141,7 +140,7 @@
                         <p class="card-text fs-5">
                             Blue, Gasoline, 7 Adults, 4 bags, 5 doors
                         </p>
-                        <a href="reservations.html" class="btn btn-lg btn-outline-warning text-black">Reserve now</a>
+                        <a href="reservations.php" class="btn btn-lg btn-outline-warning text-black">Reserve now</a>
                     </div>
                 </div>
             </div>
@@ -153,7 +152,7 @@
                         <p class="card-text fs-5">
                             White, Diesel, 5 Adults, 4 bags, 5 doors
                         </p>
-                        <a href="reservations.html" class="btn btn-lg btn-outline-warning text-black">Reserve now</a>
+                        <a href="reservations.php" class="btn btn-lg btn-outline-warning text-black">Reserve now</a>
                     </div>
                 </div>
             </div>
@@ -165,7 +164,7 @@
                         <p class="card-text fs-5">
                             Grey, Gasoline, 5 Adults, 4 bags, 5 doors
                         </p>
-                        <a href="reservations.html" class="btn btn-lg btn-outline-warning text-black">Reserve now</a>
+                        <a href="reservations.php" class="btn btn-lg btn-outline-warning text-black">Reserve now</a>
                     </div>
                 </div>
             </div>
@@ -177,7 +176,7 @@
                         <p class="card-text fs-5">
                             Black, Gasoline, 7 Adults, 4 bags, 5 doors
                         </p>
-                        <a href="reservations.html" class="btn btn-lg btn-outline-warning text-black">Reserve now</a>
+                        <a href="reservations.php" class="btn btn-lg btn-outline-warning text-black">Reserve now</a>
                     </div>
                 </div>
             </div>
@@ -190,4 +189,4 @@
     <!-- Footer End -->
 </body>
 
-</html>
+</php>
