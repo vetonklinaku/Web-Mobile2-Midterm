@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html>
 
@@ -114,23 +116,15 @@
         </div>
 
         <!-- Reservation Start -->
-        <div class="row mt-2">
+        <div class="row mt-2  <?php echo empty($_SESSION) ? 'hide' : 'shows' ?>">
             <h2 class="mt-5 mb-3 text-center">Make your reservation now!</h2>
             <div class="col-10 offset-1 p-5 shadow-lg">
                 <!-- Reservation Form Start -->
-                <form class="needs-validation">
+                <form class="needs-validation" method="POST" action="reservation-config.php">
                     <div class="row g-3">
-                        <div class="col-lg-6 col-md-12">
-                            <label for="fName" class="form-label">Name</label>
-                            <input type="text" class="form-control" placeholder="First name" aria-label="First name" id="fName" required>
-                        </div>
-                        <div class="col-lg-6 col-md-12">
-                            <label for="lName" class="form-label">Surname</label>
-                            <input type="text" class="form-control" placeholder="Last name" aria-label="Last name" id="lName" required>
-                        </div>
                         <div class="col-6">
                             <label for="pLocation" class="form-label">Pick-up Location</label>
-                            <select class="form-select" id="pLocation" required>
+                            <select class="form-select" id="pLocation" name="pLocation" value="<?php echo isset( $_POST["pLocation"] ) ? $_POST["pLocation"] : ''?>" required>
                                 <option selected>Location</option>
                                 <option value="Prishtina">Prishtina</option>
                                 <option value="Tirana">Tirana</option>
@@ -139,7 +133,7 @@
                         </div>
                         <div class="col-6">
                             <label for="dLocation" class="form-label">Drop-off Location</label>
-                            <select class="form-select" id="dLocation" required>
+                            <select class="form-select" id="dLocation" name="dLocation" value="<?php echo isset( $_POST["dLocation"] ) ? $_POST["dLocation"] : ''?>" required>
                                 <option selected>Location</option>
                                 <option value="Prishtina">Prishtina</option>
                                 <option value="Tirana">Tirana</option>
@@ -148,11 +142,15 @@
                         </div>
                         <div class="col-6">
                             <label for="pDate" class="form-label">Pick-up Date</label>
-                            <input type="date" class="form-control" id="pDate" required>
+                            <input type="date" class="form-control" id="pDate" value="<?php echo isset( $_POST["pDate"] ) ? $_POST["pDate"] : ''?>" required>
                         </div>
                         <div class="col-6">
-                            <label for="pDate" class="form-label">Drop-off Date</label>
-                            <input type="date" class="form-control" id="pDate" required>
+                            <label for="dDate" class="form-label">Drop-off Date</label>
+                            <input type="date" class="form-control" id="dDate" value="<?php echo isset( $_POST["dDate"] ) ? $_POST["dDate"] : ''?>" required>
+                        </div>
+                        <div>
+                            <input type="hidden" id="userId" name="userId" value="<?php echo $_SESSION["id"]?>">
+                            <input type="hidden" id="carId" name="carId" value="<?php $id=5;echo $id?>">
                         </div>
                         <div class="col-12 text-center ">
                             <button class="btn btn-lg btn-warning mt-4" type="submit" id="submitBtn">Submit form</button>
@@ -162,6 +160,10 @@
                 <!-- Reservation Form End -->
             </div>
         </div>
+        <div class="row mt-2 text-center mt-5  <?php echo empty($_SESSION) ? 'show' : 'hide' ?>">
+            <h2>To make a reservation you need to be logged in</h2>
+        </div>
+
         <!-- Reservation End -->
 
     </div>

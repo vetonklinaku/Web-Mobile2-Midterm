@@ -29,7 +29,8 @@
   <!-- Nav Bar Start -->
   <?php include("common/navbar.php"); ?>
   <!-- Nav Bar End -->
-
+  
+  <div class="container-fluid p-0"><img src="images/about/banner.jpg" class="img-fluid" alt="Banner"></div>
   <!-- Team cards Start -->
   <div class="container">
     <h1 class="text-center my-3">Our team</h1>

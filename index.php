@@ -185,6 +185,14 @@
     </div>
     <!-- Steps End -->
 
+        <!-- Footer Banner Start -->
+        <div class="container-fluid text-black text-center" id="bottomBanner">
+        <h1>Our support tean us available 24/7</h1>
+        <a class="btn btn-warning mt-3 text-white rounded-pill" href="mailto:reservation@washington.com" id="btnBanner">
+            <h4>Contact Us</h4>
+        </a>
+    </div>
+    <!-- Footer Banner End -->
   <?php include("common/footer.php"); ?>
 
 
