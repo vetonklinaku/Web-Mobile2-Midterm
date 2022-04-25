@@ -27,39 +27,8 @@
 </head>
 
 <body>
-    <!-- Nav Bar Start -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-black fixed-top">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">
-                <img src="./images/logo.svg" height="35px" alt="Logo" class="d-inline-block align-text-top">
-                Washington&nbsp;Rent&nbsp;A&nbsp;Car
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerCars"
-                aria-controls="navbarTogglerCars" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarTogglerCars">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="cars.html">Cars</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="reservations.html">Reservation</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="policies.html">Policies</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <!-- Nav Bar End -->
+  <?php include("common/navbar.php"); ?>
+
 
     <!-- Banner Start -->
     <div class="container-fluid text-center text-white" id="startBanner">
@@ -216,41 +185,9 @@
     </div>
     <!-- Steps End -->
 
-    <!-- Footer Banner Start -->
-    <div class="container-fluid text-black text-center" id="bottomBanner">
-        <h1>Our support tean us available 24/7</h1>
-        <a class="btn btn-warning mt-3 text-white rounded-pill" href="mailto:reservation@washington.com" id="btnBanner">
-            <h4>Contact Us</h4>
-        </a>
-    </div>
-    <!-- Footer Banner End -->
+  <?php include("common/footer.php"); ?>
 
-    <!-- Footer Start -->
-    <div class="container-fluid">
-        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-            <div class="col-md-4 d-flex align-items-center">
-                <a href="index.html" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1"><img src="./images/logo.svg" alt="LOGO" width="150px"></a>
-                <span class="text-muted">&copy; 2022 Washington Inc</span>
-            </div> 
-            <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-                <li class="ms-3"><a class="text-muted" href="https://twitter.com/"><i class="fa-brands fa-twitter fa-2x"></i></a></li>
-                <li class="ms-3"><a class="text-muted" href="https://www.facebook.com/"><i class="fa-brands fa-facebook fa-2x"></i></a></li>
-                <li class="ms-3"><a class="text-muted" href="https://www.instagram.com/"><i class="fa-brands fa-instagram fa-2x"></i></a></li>
-            </ul>
-        </footer>
-    </div>
-    <!-- Footer End -->
 
-    <!-- To Top Start -->
-    <div id="butoni">
-        <div id="showButton">
-            <a href="#top">
-                <div class="toTopButtonImage"><i class="fa-solid fa-angle-up fa-3x text-warning"></i></div>
-            </a>
-        </div>
-    </div>
-    <!-- To Top End -->
-    </div>
 </body>
 
 </html>
