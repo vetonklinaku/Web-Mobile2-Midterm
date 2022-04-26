@@ -1,4 +1,35 @@
+<?php error_reporting(0); ?> 
 
+<?php 
+require_once "./common/config.php";
+
+
+if (isset($_POST["submit"])){
+    $pDate = $_POST["pDate"];
+    $dDate = $_POST["dDate"];    
+
+    $carID = $_POST["carId"];
+    $userId = $_POST["userId"];
+    $pLocation = $_POST["pLocation"];
+    $dLocation = $_POST["dLocation"];  
+    
+    $insertQuery="INSERT INTO reservation(carID, userID, pickUpLocation, dropOfLocation,pickUpDate,dropOfDate) VALUES ('$userId', '$carID', '$pLocation', '$dLocation','$pDate','$dDate')";
+    echo $insertQuery;
+    if(mysqli_query($link,$insertQuery)){
+        // Redirect back to blog page
+        header("location: reservations.php");
+        echo "successful insert";
+    } else{
+        echo $query;
+        echo "Oops! Something went wrong. Please try again later.";
+    }
+}
+
+
+// Close connection
+mysqli_close($link);
+
+?>
 
 <!DOCTYPE html>
 <html>
@@ -120,11 +151,11 @@
             <h2 class="mt-5 mb-3 text-center">Make your reservation now!</h2>
             <div class="col-10 offset-1 p-5 shadow-lg">
                 <!-- Reservation Form Start -->
-                <form class="needs-validation" method="POST" action="reservation-config.php">
+                <form method="POST" action="<?php echo $_SERVER['PHP_SELF'] ?>">
                     <div class="row g-3">
                         <div class="col-6">
                             <label for="pLocation" class="form-label">Pick-up Location</label>
-                            <select class="form-select" id="pLocation" name="pLocation" value="<?php echo isset( $_POST["pLocation"] ) ? $_POST["pLocation"] : ''?>" required>
+                            <select class="form-select" id="pLocation" name="pLocation" value="<?php echo isset( $_POST["pLocation"] ) ? $_POST["pLocation"] : '' ?>" required>
                                 <option selected>Location</option>
                                 <option value="Prishtina">Prishtina</option>
                                 <option value="Tirana">Tirana</option>
@@ -133,7 +164,7 @@
                         </div>
                         <div class="col-6">
                             <label for="dLocation" class="form-label">Drop-off Location</label>
-                            <select class="form-select" id="dLocation" name="dLocation" value="<?php echo isset( $_POST["dLocation"] ) ? $_POST["dLocation"] : ''?>" required>
+                            <select class="form-select" id="dLocation" name="dLocation" value="<?php echo isset( $_POST["dLocation"] ) ? $_POST["dLocation"] : '' ?>" required>
                                 <option selected>Location</option>
                                 <option value="Prishtina">Prishtina</option>
                                 <option value="Tirana">Tirana</option>
@@ -141,19 +172,19 @@
                             </select>
                         </div>
                         <div class="col-6">
-                            <label for="pDate" class="form-label">Pick-up Date</label>
-                            <input type="date" class="form-control" id="pDate" value="<?php echo isset( $_POST["pDate"] ) ? $_POST["pDate"] : ''?>" required>
+                            <label for="pickDate" class="form-label">Pick-up Date</label>
+                            <input type="date" class="form-control date" name="pDate" value="<?php echo isset( $_POST["pDate"] ) ? $_POST["pDate"] : '' ?>" required>
                         </div>
                         <div class="col-6">
-                            <label for="dDate" class="form-label">Drop-off Date</label>
-                            <input type="date" class="form-control" id="dDate" value="<?php echo isset( $_POST["dDate"] ) ? $_POST["dDate"] : ''?>" required>
+                            <label for="dropDate" class="form-label">Drop-off Date</label>
+                            <input type="date" class="form-control date" name="dDate" value="<?php echo isset( $_POST["dDate"] ) ? $_POST["dDate"] : '' ?>" required>
                         </div>
                         <div>
                             <input type="hidden" id="userId" name="userId" value="<?php echo $_SESSION["id"]?>">
-                            <input type="hidden" id="carId" name="carId" value="<?php $id=5;echo $id?>">
+                            <input type="hidden" id="carId" name="carId" value="<?php $id=1;echo $id?>">
                         </div>
                         <div class="col-12 text-center ">
-                            <button class="btn btn-lg btn-warning mt-4" type="submit" id="submitBtn">Submit form</button>
+                            <input class="btn btn-lg btn-warning mt-4" name="submit" type="submit" id="submitBtn">
                         </div>
                     </div>
                 </form>
